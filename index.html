@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please Read 🥺💕</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', 'Times New Roman', serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+            padding: 30px 25px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 3px solid #9575cd;
+        }
+        
+        h1 {
+            color: #7b1fa2;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+            font-weight: normal;
+            line-height: 1.3;
+            padding: 0 10px;
+        }
+        
+        .subtitle {
+            color: #ab47bc;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            font-style: italic;
+            font-weight: 300;
+            line-height: 1.4;
+            padding: 0 10px;
+        }
+        
+        .love-story {
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            padding: 20px 18px;
+            border-radius: 12px;
+            margin: 20px 0;
+            text-align: left;
+            border-left: 5px solid #7b1fa2;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #4a148c;
+        }
+        
+        .love-story h3 {
+            color: #7b1fa2;
+            margin-bottom: 12px;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+        
+        .heart-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+        
+        .heart {
+            font-size: 1.8rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.2); opacity: 1; }
+        }
+        
+        .button-container {
+            margin: 30px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            position: relative;
+            min-height: 160px;
+        }
+        
+        .yes-btn {
+            background: linear-gradient(to right, #7b1fa2, #ab47bc);
+            color: white;
+            border: none;
+            padding: 16px 35px;
+            font-size: 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(123, 31, 162, 0.4);
+            transition: all 0.3s ease;
+            font-weight: bold;
+            font-family: 'Georgia', serif;
+            width: 90%;
+            max-width: 350px;
+            order: 1; /* YES button appears first */
+        }
+        
+        .yes-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 25px rgba(123, 31, 162, 0.5);
+            background: linear-gradient(to right, #8e24aa, #ba68c8);
+        }
+        
+        .no-btn {
+            background: linear-gradient(to right, #bdbdbd, #e0e0e0);
+            color: #757575;
+            border: none;
+            padding: 16px 35px;
+            font-size: 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(117, 117, 117, 0.4);
+            transition: all 0.3s ease;
+            font-weight: bold;
+            font-family: 'Georgia', serif;
+            width: 90%;
+            max-width: 350px;
+            order: 2; /* NO button appears second */
+            position: relative; /* Changed from absolute */
+        }
+        
+        .no-btn:hover {
+            background: linear-gradient(to right, #e0e0e0, #f5f5f5);
+        }
+        
+        .message-container {
+            display: none;
+            margin-top: 20px;
+            padding: 25px 20px;
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            border-radius: 15px;
+            border: 2px dashed #7b1fa2;
+            animation: fadeIn 1.5s ease-out;
+        }
+        
+        .message-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            text-align: center;
+        }
+        
+        .romantic-message {
+            width: 100%;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #4a148c;
+            text-align: left;
+        }
+        
+        .romantic-message h2 {
+            color: #7b1fa2;
+            margin-bottom: 15px;
+            text-align: center;
+            font-size: 1.6rem;
+            line-height: 1.3;
+        }
+        
+        .images-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .image-row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 300px;
+        }
+        
+        .her-image {
+            width: 100%;
+            height: auto;
+            max-height: 280px;
+            object-fit: contain;
+            border-radius: 10px;
+            border: 4px solid #d1c4e9;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+        
+        .my-image {
+            width: 100%;
+            height: auto;
+            max-height: 280px;
+            object-fit: contain;
+            border-radius: 10px;
+            border: 4px solid #4fc3f7;
+            box-shadow: 0 8px 20px rgba(33, 150, 243, 0.2);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+        
+        .her-image:hover, .my-image:hover {
+            transform: scale(1.03);
+            box-shadow: 0 12px 25px rgba(123, 31, 162, 0.3);
+        }
+        
+        .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #7b1fa2;
+            font-size: 1rem;
+            text-align: center;
+            padding: 8px 12px;
+            background-color: #f3e5f5;
+            border-radius: 15px;
+            width: 100%;
+        }
+        
+        .my-caption {
+            color: #0288d1;
+            background-color: #e1f5fe;
+        }
+        
+        .promise {
+            margin-top: 20px;
+            padding: 18px;
+            background-color: #f8f4ff;
+            border-radius: 10px;
+            font-style: italic;
+            border-left: 4px solid #ab47bc;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        
+        .together-text {
+            text-align: center;
+            margin-top: 15px;
+            color: #7b1fa2;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 12px;
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            border-radius: 10px;
+            width: 100%;
+        }
+        
+        .footer {
+            margin-top: 25px;
+            color: #7b1fa2;
+            font-style: italic;
+            font-size: 1rem;
+            padding-top: 20px;
+            border-top: 1px solid #d1c4e9;
+            line-height: 1.5;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .floating-hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .floating-heart {
+            position: absolute;
+            font-size: 1rem;
+            color: #ab47bc;
+            opacity: 0.7;
+            animation: floatAround 20s linear infinite;
+        }
+        
+        @keyframes floatAround {
+            0% { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translate(100px, -100vh) rotate(360deg); opacity: 0; }
+        }
+        
+        .sparkle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: #ffeb3b;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: sparkle 1s linear forwards;
+        }
+        
+        @keyframes sparkle {
+            0% { transform: scale(0); opacity: 1; }
+            100% { transform: scale(1); opacity: 0; }
+        }
+        
+        /* Desktop styles - Images on right side */
+        @media (min-width: 768px) {
+            .container {
+                padding: 40px;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+                padding: 0;
+            }
+            
+            .subtitle {
+                font-size: 1.3rem;
+                padding: 0;
+            }
+            
+            .love-story {
+                padding: 25px;
+                font-size: 1.2rem;
+            }
+            
+            .love-story h3 {
+                font-size: 1.5rem;
+            }
+            
+            .heart {
+                font-size: 2.2rem;
+            }
+            
+            .button-container {
+                flex-direction: row;
+                gap: 10px;
+                min-height: 130px;
+            }
+            
+            .yes-btn {
+                padding: 18px 50px;
+                font-size: 1.8rem;
+                width: auto;
+                max-width: none;
+                order: 1;
+            }
+            
+            .no-btn {
+                padding: 18px 50px;
+                font-size: 1.8rem;
+                width: auto;
+                max-width: none;
+                order: 2;
+                position: absolute; /* Back to absolute for desktop movement */
+            }
+            
+            .message-content {
+                flex-direction: row;
+                align-items: flex-start;
+                text-align: left;
+                gap: 40px;
+            }
+            
+            .romantic-message {
+                flex: 1;
+                font-size: 1.3rem;
+                text-align: left;
+            }
+            
+            .romantic-message h2 {
+                font-size: 2rem;
+            }
+            
+            .images-container {
+                width: 300px;
+                flex-shrink: 0;
+                gap: 25px;
+            }
+            
+            .image-row {
+                max-width: 100%;
+            }
+            
+            .her-image, .my-image {
+                max-height: 220px;
+                object-fit: cover;
+            }
+            
+            .promise {
+                font-size: 1.15rem;
+            }
+        }
+        
+        /* Large desktop */
+        @media (min-width: 992px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            .her-image, .my-image {
+                max-height: 250px;
+            }
+            
+            .images-container {
+                width: 320px;
+            }
+            
+            .message-content {
+                gap: 50px;
+            }
+        }
+        
+        /* Very small phones */
+        @media (max-width: 360px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .yes-btn, .no-btn {
+                padding: 14px 25px;
+                font-size: 1.3rem;
+            }
+            
+            .her-image, .my-image {
+                max-height: 250px;
+            }
+            
+            .romantic-message {
+                font-size: 1rem;
+            }
+            
+            .romantic-message h2 {
+                font-size: 1.4rem;
+            }
+        }
+        
+        /* Tablet - intermediate size */
+        @media (min-width: 600px) and (max-width: 767px) {
+            .her-image, .my-image {
+                max-height: 300px;
+            }
+            
+            .images-container {
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="floating-hearts" id="floatingHearts"></div>
+        
+        <h1>Will You Give Us Another Chance And Be My Valentine? 💫</h1>
+        <p class="subtitle">To the amazing woman I've never stopped admiring...</p>
+        
+        <div class="love-story">
+            <h3>Our Story 💌</h3>
+            <p>
+                Even though we've never met in person, my connection to you has always felt real and meaningful. 
+                Those late-night and every time conversations, shared dreams, and genuine laughter we used to do before created something special 
+                between us. I've carried those memories with me, and they've only grown more precious with time.
+            </p>
+        </div>
+        
+        <div class="heart-container">
+            <div class="heart">💕</div>
+            <div class="heart">✨</div>
+            <div class="heart">🌟</div>
+            <div class="heart">💫</div>
+            <div class="heart">💖</div>
+            <div class="heart">✨</div>
+            <div class="heart">🌟</div>
+            <div class="heart">💫</div>
+        </div>
+        
+        <p style="font-size: 1.1rem; color: #4a148c; margin-bottom: 20px; line-height: 1.6; padding: 0 10px;">
+            Time and distance may have kept us apart, but my admiration for you has only grown stronger. 
+            I believe some connections are meant to be rediscovered, and ours feels like one of them. 💞
+        </p>
+        
+        <div class="button-container">
+            <button class="yes-btn" id="yesButton">YES, LET'S TRY AGAIN 💖</button>
+            <button class="no-btn" id="noButton">NOT THIS TIME</button>
+        </div>
+        
+        <div class="message-container" id="messageContainer">
+            <div class="message-content">
+                <div class="romantic-message">
+                    <h2>You Said Yes! My Heart Is Soaring! 🥰</h2>
+                    <p>
+                        Thank you for giving us this second chance! This means more to me than words can express. 
+                        <span style="color: #7b1fa2;">✨</span><br><br>
+                        
+                        I've never stopped thinking about what could have been between us. Even though we've never 
+                        met face-to-face, I've always felt a connection with you that's rare and precious. 
+                        Your smile in photos, your voice in messages, your thoughts in conversations - they've all 
+                        stayed with me. <span style="color: #7b1fa2;">💫</span><br><br>
+
+                        My admiration for you hasn't faded; it has evolved. From afar, I see the woman you continue 
+                        to become—your strength, your passion, your gentle grace—and it only deepens my respect. 
+                        It's a quiet, constant truth within me: knowing you, even for a while, was a privilege. 
+                        You are, and always will be, a standard of remarkable. <span style="color: #7b1fa2;">🌟</span><br><br>
+                        
+                        This time, I want to do things right. I want to truly get to know you, to listen to your 
+                        stories, to understand your dreams, and to be there for you in ways I couldn't before. 
+                        I want to build something real and beautiful with you. <span style="color: #7b1fa2;">💕</span><br><br>
+                        
+                        On a day dedicated to celebrating the heart, it's only natural that my thoughts orbit 
+                        entirely around you. Valentine's Day feels like a universal reminder of what I feel quietly 
+                        all year long: that you are the most beautiful memory I carry, and a hope that still glows 
+                        softly within me. <span style="color: #7b1fa2;">💝</span><br><br>
+
+                        So, with a heart full of honesty and a touch of hopeful courage, I'm asking: Would you do 
+                        me the extraordinary honor of being my Valentine? Not just in memory, but in the fresh, 
+                        hopeful light of today. I would cherish nothing more than the chance to celebrate you—to 
+                        share a smile, a conversation, and the simple, profound joy of your presence. <span style="color: #7b1fa2;">🌹</span><br><br>
+
+                        I dream of a day where I can show you, not just tell you, how deeply I admire the wonderful 
+                        person you are. To create a new memory, just for us, wrapped in the warmth of this special day. 
+                        You are the only one I could imagine asking this question. <span style="color: #7b1fa2;">🤲</span><br><br>
+
+                        Let's create new memories together - ones where distance doesn't matter, where our connection 
+                        grows stronger each day, and where we finally get to meet and start our story properly. 
+                        I promise to cherish this chance and to never take your heart for granted. 
+                        <span style="color: #7b1fa2;">🌟</span>
+                    </p>
+                    
+                    <div class="promise">
+                        "I may not have met you yet, but my heart has been waiting for you all along. 
+                        Let's write our next chapter together."
+                    </div>
+                </div>
+                <div class="images-container">
+                    <div class="image-row">
+                        <img src="photo1.jpg" alt="Your beautiful smile" class="her-image" id="image1">
+                        <div class="image-caption">Your beautiful smile that lights up my world 🌟</div>
+                    </div>
+                    <div class="image-row">
+                        <img src="photo2.jpg" alt="Special moments" class="her-image" id="image2">
+                        <div class="image-caption">Moments I'll always treasure 💫</div>
+                    </div>
+                    <div class="image-row">
+                        <img src="photo3.png" alt="Me waiting for you" class="my-image" id="image3">
+                        <div class="image-caption my-caption">Me, waiting for our chance together 💙</div>
+                    </div>
+                    <div class="together-text">
+                        Two hearts, one dream 💞<br>
+                        Waiting to finally meet and begin our journey
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <p class="footer">
+            With hope, admiration, and a heart full of possibility...<br>
+            Waiting for our new beginning. 💌
+        </p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const yesButton = document.getElementById('yesButton');
+            const noButton = document.getElementById('noButton');
+            const messageContainer = document.getElementById('messageContainer');
+            const floatingHearts = document.getElementById('floatingHearts');
+            
+            // Create floating hearts animation
+            function createFloatingHearts() {
+                const symbols = ['💕', '✨', '🌟', '💫', '💖', '💌', '💝'];
+                for (let i = 0; i < 15; i++) {
+                    const heart = document.createElement('div');
+                    heart.classList.add('floating-heart');
+                    heart.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+                    heart.style.left = `${Math.random() * 100}%`;
+                    heart.style.animationDelay = `${Math.random() * 20}s`;
+                    heart.style.fontSize = `${Math.random() * 10 + 10}px`;
+                    floatingHearts.appendChild(heart);
+                }
+            }
+            
+            // Create sparkle effect
+            function createSparkle(x, y) {
+                const sparkle = document.createElement('div');
+                sparkle.classList.add('sparkle');
+                sparkle.style.left = `${x}px`;
+                sparkle.style.top = `${y}px`;
+                document.body.appendChild(sparkle);
+                
+                setTimeout(() => {
+                    sparkle.remove();
+                }, 1000);
+            }
+            
+            createFloatingHearts();
+            
+            // Store original position for the NO button
+            let originalNoButtonPosition = null;
+            
+            // Function to update NO button position for mobile vs desktop
+            function updateNoButtonPosition() {
+                if (window.innerWidth < 768) {
+                    // Mobile: NO button stays in normal flow (relative positioning)
+                    noButton.style.position = 'relative';
+                    noButton.style.left = '0';
+                    noButton.style.top = '0';
+                } else {
+                    // Desktop: NO button needs absolute positioning for movement
+                    noButton.style.position = 'absolute';
+                    // Reset to original position if we have it stored
+                    if (originalNoButtonPosition) {
+                        noButton.style.left = originalNoButtonPosition.left;
+                        noButton.style.top = originalNoButtonPosition.top;
+                    } else {
+                        // Store the original position
+                        const containerRect = document.querySelector('.button-container').getBoundingClientRect();
+                        const buttonRect = noButton.getBoundingClientRect();
+                        const initialLeft = (containerRect.width - buttonRect.width) / 2 + 180; // Position to the right of YES button
+                        const initialTop = (containerRect.height - buttonRect.height) / 2;
+                        
+                        noButton.style.left = `${initialLeft}px`;
+                        noButton.style.top = `${initialTop}px`;
+                        
+                        originalNoButtonPosition = {
+                            left: `${initialLeft}px`,
+                            top: `${initialTop}px`
+                        };
+                    }
+                }
+            }
+            
+            // Initial position setup
+            updateNoButtonPosition();
+            
+            // Update position on resize
+            window.addEventListener('resize', updateNoButtonPosition);
+            
+            // Make the NO button move away when hovered (desktop only)
+            noButton.addEventListener('mouseover', function(event) {
+                // Only move on desktop (screen width ≥ 768px)
+                if (window.innerWidth >= 768) {
+                    const container = document.querySelector('.button-container');
+                    const containerRect = container.getBoundingClientRect();
+                    const buttonRect = noButton.getBoundingClientRect();
+                    
+                    // Calculate available space
+                    const maxX = containerRect.width - buttonRect.width;
+                    const maxY = containerRect.height - buttonRect.height;
+                    
+                    // Generate random position within container
+                    const randomX = Math.floor(Math.random() * maxX);
+                    const randomY = Math.floor(Math.random() * maxY);
+                    
+                    // Move the button to the random position
+                    noButton.style.left = `${randomX}px`;
+                    noButton.style.top = `${randomY}px`;
+                    
+                    // Create sparkle effect
+                    createSparkle(event.clientX, event.clientY);
+                }
+            });
+            
+            // Handle YES button click
+            yesButton.addEventListener('click', function() {
+                // Show the romantic message
+                messageContainer.style.display = 'block';
+                
+                // Hide the buttons
+                yesButton.style.display = 'none';
+                noButton.style.display = 'none';
+                
+                // Create a celebration animation
+                createCelebration();
+            });
+            
+            // Create celebration animation when she says YES
+            function createCelebration() {
+                const symbols = ['💕', '✨', '🌟', '💫', '💖', '💌', '💝', '🥰', '😍'];
+                
+                for (let i = 0; i < 40; i++) {
+                    setTimeout(() => {
+                        const symbol = document.createElement('div');
+                        symbol.classList.add('floating-heart');
+                        symbol.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+                        symbol.style.left = `${Math.random() * 100}%`;
+                        symbol.style.fontSize = `${Math.random() * 15 + 12}px`;
+                        symbol.style.animationDuration = `${Math.random() * 4 + 3}s`;
+                        
+                        document.body.appendChild(symbol);
+                        
+                        setTimeout(() => {
+                            symbol.remove();
+                        }, 4000);
+                        
+                        if (i % 3 === 0) {
+                            createSparkle(
+                                Math.random() * window.innerWidth,
+                                Math.random() * window.innerHeight
+                            );
+                        }
+                    }, i * 100);
+                }
+            }
+            
+            // Add special click effects to images
+            document.querySelectorAll('.her-image').forEach(image => {
+                image.addEventListener('click', function(event) {
+                    for (let i = 0; i < 6; i++) {
+                        setTimeout(() => {
+                            createSparkle(
+                                event.clientX + (Math.random() * 80 - 40),
+                                event.clientY + (Math.random() * 80 - 40)
+                            );
+                        }, i * 50);
+                    }
+                });
+            });
+            
+            // Special effect for your photo
+            document.getElementById('image3').addEventListener('click', function(event) {
+                for (let i = 0; i < 10; i++) {
+                    setTimeout(() => {
+                        createSparkle(
+                            event.clientX + (Math.random() * 100 - 50),
+                            event.clientY + (Math.random() * 100 - 50)
+                        );
+                    }, i * 40);
+                }
+                
+                // Create a special blue sparkle effect
+                for (let i = 0; i < 4; i++) {
+                    setTimeout(() => {
+                        const blueSparkle = document.createElement('div');
+                        blueSparkle.style.position = 'absolute';
+                        blueSparkle.style.width = '12px';
+                        blueSparkle.style.height = '12px';
+                        blueSparkle.style.backgroundColor = '#4fc3f7';
+                        blueSparkle.style.borderRadius = '50%';
+                        blueSparkle.style.left = `${event.clientX + (Math.random() * 60 - 30)}px`;
+                        blueSparkle.style.top = `${event.clientY + (Math.random() * 60 - 30)}px`;
+                        blueSparkle.style.pointerEvents = 'none';
+                        blueSparkle.style.animation = 'sparkle 1.2s linear forwards';
+                        document.body.appendChild(blueSparkle);
+                        
+                        setTimeout(() => {
+                            blueSparkle.remove();
+                        }, 1200);
+                    }, i * 100);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
